@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology/"
+     xml:base="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:wineontology="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology">
+        <wineontology:description>Ontology Wines Reviews including winery, wines, properties of wines, year of production.</wineontology:description>
+        <wineontology:title>WineOntology</wineontology:title>
+        <owl:versionInfo>v0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#title -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasRegion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/WineRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#isProducerOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#isProducerOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/Winery"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/price -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/rating -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/year -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasAcidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasAcidity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasBody -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasBody">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasNumReviews -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#hasNumReviews">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Country -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Country"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/WineRegion -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/WineRegion">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Winery -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Winery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Albarino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Albarino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#CabernetSauvignon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#CabernetSauvignon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Cava -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Cava">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Chardonnay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Chardonnay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Grenache -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Grenache">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Mencia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Mencia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Monastrell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Monastrell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#MontsantRed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#MontsantRed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PedroXimenez -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PedroXimenez">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PrioratRed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#PrioratRed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiberaDelDueroRed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiberaDelDueroRed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaRed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaRed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaWhite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RiojaWhite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RoseWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RoseWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#SauvignonBlanc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#SauvignonBlanc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sherry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sherry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sparkling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Sparkling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Syrah -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Syrah">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Tempranillo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Tempranillo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#ToroRed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#ToroRed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Verdejo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Verdejo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Wine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://dbpedia.org/ontology/year"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#Other"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RedWine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#RoseWine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/aizquierdo/ontologies/2023/3/wineontology#WhiteWine"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
